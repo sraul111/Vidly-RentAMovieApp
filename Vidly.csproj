@@ -154,6 +154,14 @@
     <Compile Include="Migrations\202004281128233_AddMembershipType.designer.cs">
       <DependentUpon>202004281128233_AddMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004281241216_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202004281241216_PopulateMembershipTypes.designer.cs">
+      <DependentUpon>202004281241216_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004281305582_ApplyAnnotationToCustomerName.cs" />
+    <Compile Include="Migrations\202004281305582_ApplyAnnotationToCustomerName.designer.cs">
+      <DependentUpon>202004281305582_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -211,10 +219,11 @@
     <Content Include="Views\Shared\_NavBar1.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Detail.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -238,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004281128233_AddMembershipType.resx">
       <DependentUpon>202004281128233_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004281241216_PopulateMembershipTypes.resx">
+      <DependentUpon>202004281241216_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004281305582_ApplyAnnotationToCustomerName.resx">
+      <DependentUpon>202004281305582_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,39 @@
+﻿@using System.Web.UI.HtmlControls
+@model System.Collections.Generic.List<Vidly.Models.Customer>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/views/shared/_Layout1.cshtml";
+ }
+
+<h2>Customers</h2>
+
+<ul>
+    @foreach (var customer in @Model)
+    {
+        <li>@Html.ActionLink(@customer.Name,"details", "Customer",
+                new {id=customer.Id},null)</li>
+    }
+</ul>
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Customer</th> <th>Discount Rate</th>
+    </tr>
+    <thead>
+    <tbody>
+    @foreach (var customer in @Model)
+    {
+        <tr>
+
+            <td>@Html.ActionLink(@customer.Name, "details", "Customer",
+                    new {id = customer.Id}, null)</td>
+            <td>
+                @customer.MemberShipType.DiscountRate
+            </td>
+        </tr>
+    }
+    </tbody>
+    <tr></tr>
+</table>
