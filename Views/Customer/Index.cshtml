@@ -8,18 +8,12 @@
 
 <h2>Customers</h2>
 
-<ul>
-    @foreach (var customer in @Model)
-    {
-        <li>@Html.ActionLink(@customer.Name,"details", "Customer",
-                new {id=customer.Id},null)</li>
-    }
-</ul>
+
 
 <table class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th>Customer</th> <th>Discount Rate</th>
+        <th>Customer</th> <th>MemberShip Type</th>
     </tr>
     <thead>
     <tbody>
@@ -30,7 +24,7 @@
             <td>@Html.ActionLink(@customer.Name, "details", "Customer",
                     new {id = customer.Id}, null)</td>
             <td>
-                @customer.MemberShipType.DiscountRate
+                @customer.MemberShipType.Name
             </td>
         </tr>
     }

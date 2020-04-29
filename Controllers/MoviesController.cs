@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Schema;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
-    { 
-        List<Movie> movies = new List<Movie>
-            {
-                new Movie {Id =1, Name = "Shrek !"},
-                new Movie {Id = 2, Name = "Die Hard"}
-            };
+    {
 
+        private ApplicationDbContext _context;
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -50,19 +52,24 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            
-            var movieCollectionViewModel = new MoviesCollectionViewModel()
+             var moviesVM = new MoviesCollectionViewModel
             {
-                Movies = movies
+                Movies = _context.Movies.Include(c => c.Genere).ToList()
             };
+            
 
-            return View(movieCollectionViewModel);
+            return View(moviesVM);
         }
 
-        [Route("movies/detail/{id}")]
+        [Route("movies/details/{id}")]
         public ActionResult Detail(int id)
         {
-            var movie = movies.SingleOrDefault(x => x.Id == id);
+            var moviesVM = new MoviesCollectionViewModel
+            {
+                Movies = _context.Movies.ToList()
+            };
+
+            var movie = moviesVM.Movies.SingleOrDefault(x => x.Id == id);
             if (movie == null)
                 //return HttpNotFound();
                 return Content("the movie is not in our db.");

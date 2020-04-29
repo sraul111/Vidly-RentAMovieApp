@@ -162,10 +162,39 @@
     <Compile Include="Migrations\202004281305582_ApplyAnnotationToCustomerName.designer.cs">
       <DependentUpon>202004281305582_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004281610022_AddNameToMigrationType.cs" />
+    <Compile Include="Migrations\202004281610022_AddNameToMigrationType.designer.cs">
+      <DependentUpon>202004281610022_AddNameToMigrationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004281625150_updateMembershipTypeName.cs" />
+    <Compile Include="Migrations\202004281625150_updateMembershipTypeName.designer.cs">
+      <DependentUpon>202004281625150_updateMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004290751120_AddDOBtoCustomer.cs" />
+    <Compile Include="Migrations\202004290751120_AddDOBtoCustomer.designer.cs">
+      <DependentUpon>202004290751120_AddDOBtoCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004290830003_DobColumnOfCustomerDeclaredNull.cs" />
+    <Compile Include="Migrations\202004290830003_DobColumnOfCustomerDeclaredNull.designer.cs">
+      <DependentUpon>202004290830003_DobColumnOfCustomerDeclaredNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004290857166_AddMovieToApplicationDBContext.cs" />
+    <Compile Include="Migrations\202004290857166_AddMovieToApplicationDBContext.Designer.cs">
+      <DependentUpon>202004290857166_AddMovieToApplicationDBContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004290915005_AddGenere.cs" />
+    <Compile Include="Migrations\202004290915005_AddGenere.Designer.cs">
+      <DependentUpon>202004290915005_AddGenere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004290925152_populateGenere.cs" />
+    <Compile Include="Migrations\202004290925152_populateGenere.Designer.cs">
+      <DependentUpon>202004290925152_populateGenere.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genere.cs" />
     <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,6 +282,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004281305582_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>202004281305582_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004281610022_AddNameToMigrationType.resx">
+      <DependentUpon>202004281610022_AddNameToMigrationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004281625150_updateMembershipTypeName.resx">
+      <DependentUpon>202004281625150_updateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004290751120_AddDOBtoCustomer.resx">
+      <DependentUpon>202004290751120_AddDOBtoCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004290830003_DobColumnOfCustomerDeclaredNull.resx">
+      <DependentUpon>202004290830003_DobColumnOfCustomerDeclaredNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004290857166_AddMovieToApplicationDBContext.resx">
+      <DependentUpon>202004290857166_AddMovieToApplicationDBContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004290915005_AddGenere.resx">
+      <DependentUpon>202004290915005_AddGenere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004290925152_populateGenere.resx">
+      <DependentUpon>202004290925152_populateGenere.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
